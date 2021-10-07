@@ -1,24 +1,24 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../pages/Home';
+
 import Cart from '../pages/Cart';
+import StackRoutes from './StackRoutes';
+
 import { FontAwesome5 as FontIcon } from '@expo/vector-icons';
 
-import CartIcon from '../assets/cartIcon.svg'
-
-
+const Tab = createBottomTabNavigator();
 const Routes:React.FC = () => {
-    const Tab = createBottomTabNavigator();
-
-    return(
+  
+  return(
     <>
      <Tab.Navigator
      screenOptions={{
-         headerShown: false
+         headerShown: false,
+         tabBarActiveTintColor: '#000',
      }}>
         <Tab.Screen 
         name="Home"
-         component={Home} 
+         component={StackRoutes} 
          options={{
             tabBarIcon: ({ color, size }) => (
                 <FontIcon name="home" color={color} size={size} />
@@ -29,11 +29,9 @@ const Routes:React.FC = () => {
          name="Carrinho" 
          component={Cart}
          options={{
-          
             tabBarIcon: ({ color, size }) => (
-              <CartIcon height={size} width={size} fill={color} />
+              <FontIcon name="shopping-cart" size={size} color={color} />
             ),
-
           }}/> 
     </Tab.Navigator>
     </>
