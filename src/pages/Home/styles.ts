@@ -36,13 +36,13 @@ margin-left: 20px;
 `;
 
 export const BannerButton = styled.TouchableOpacity`
-border: 1px solid red;
-   
-
 `;
 
 export const Banner = styled.Image`
 height: 150px;
 width: 100%;
 border-radius: 6px;
+`;
+export const ListProduct = styled.FlatList`
+padding: 0 14px;
 `;
