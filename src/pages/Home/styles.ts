@@ -45,4 +45,5 @@ border-radius: 6px;
 `;
 export const ListProduct = styled.FlatList`
 padding: 0 14px;
+flex: 1;
 `;
