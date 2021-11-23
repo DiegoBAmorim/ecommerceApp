@@ -67,6 +67,7 @@ export const ScrollList = styled.ScrollView`
 
 export const Title = styled.Text`
 color: #000;
+margin-bottom: 10px;
 font-size: 22px;
 font-weight: bold;
 padding: 8px 0px;

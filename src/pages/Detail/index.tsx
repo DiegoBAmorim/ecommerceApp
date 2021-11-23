@@ -8,8 +8,8 @@ import {Container, Header, HeaderButton, Banner, ProductName, ProductPrice, Titl
 const Detail: React.FC= () => {
     const navigation = useNavigation();
     const route = useRoute();
-    const { name, price, description, image}: any = route.params;
-    
+    const { data }: any = route.params;
+    console.log(data)
     return(
         <>
         <Container>
@@ -24,22 +24,22 @@ const Detail: React.FC= () => {
          </Header>
          <Banner 
         resizeMethod="resize"
-        source={require('../../assets/fifa-18.png')}
+        source={data.image}
         />
         <Main>
          <ProductView>
-           <ProductName>{name}</ProductName>
-           <ProductPrice>R$ {JSON.stringify(price)}</ProductPrice>
+           <ProductName>{data.name}</ProductName>
+           <ProductPrice>R$ {JSON.stringify(data.price)}</ProductPrice>
          </ProductView>
          <CartBtn>
            <FontAwesome5 name="shopping-cart" size={26} color={'#000'} />
            <AddCarTxt>Adicionar ao Carrinho</AddCarTxt>
          </CartBtn>
         </Main>
+        <Title>Descrição</Title>
         <ScrollList showsVerticalScrollIndicator={false}>
-            <Title>Descrição</Title>
             <Description>
-                {description}
+                {data.description}
             </Description>
         </ScrollList>
         
