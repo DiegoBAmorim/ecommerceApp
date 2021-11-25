@@ -8,10 +8,9 @@ interface Props {
 }
 
 const Products: React.FC<Props> = ({data, navigatePage}) => {
-    
     return (
         <Container onPress={() => navigatePage(data)}>
-            <Img source={data.image} />
+            <Img source={data.image} resizeMode="cover"/>
             <Title>{data.name}</Title>
         </Container>
     )
