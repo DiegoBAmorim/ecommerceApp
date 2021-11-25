@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import {TouchableWithoutFeedback, Keyboard} from 'react-native';
 
-import data from '../../utils/products.js';
+import data from '../../utils/products';
 import Products from '../../components/Products';
 
 import { AntDesign as FontIcon } from '@expo/vector-icons';
