@@ -4,13 +4,17 @@ import {TouchableWithoutFeedback, Keyboard} from 'react-native';
 
 import data from '../../utils/products';
 import Products from '../../components/Products';
+import Banner from '../../components/Banner';
 
 import { AntDesign as FontIcon } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
+import Header from '../../components/Header';
+import CartHome from '../../components/CartHome';
+
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { Container, Search, WrapSearch, BtnSearch, Filter, Header, BannerButton, Banner, ListProduct} from './styles';
+import { Container, Search, WrapSearch, BtnSearch, Filter, BannerButton, ListProduct, Title, Highlights, ContainerBannerActions} from './styles';
 import { RootStackParamList } from '../../routes/StackRoutes';
 
 
@@ -58,7 +62,8 @@ const Home:React.FC<Props> = ({navigation}) => {
     return(
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <Container>
-        <Header>
+        <Header />
+        {/* <Header>
         <WrapSearch>
           <Search 
           placeholder="Busque seu produto" 
@@ -70,21 +75,18 @@ const Home:React.FC<Props> = ({navigation}) => {
         <Filter onPress={handleOrderClick}>
          <FontIcon name="filter" size={28} color="black" />
         </Filter>
-        </Header>
-        
-        {/* <BannerButton activeOpacity={0.9} >
-            <Banner 
-            resizeMode="contain"
-            source={require('../../assets/fifa-18.png')}
-            />
-        </BannerButton> */}
+        </Header> */}
+       <Banner />
+        <Title>Workspaces</Title>
         <ListProduct 
         data={products}
-        keyExtractor={(item: any) => String(item.id)}
-        numColumns={2}
-        showsVerticalScrollIndicator={false}
+        keyExtractor={(item: any) => String(item.id)} 
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
         renderItem={({item}) => <Products data={item} navigatePage={() => navigateDetailsPage(item)}/>}
         />
+        <Title style={{flex:1}}> New arrivals</Title>
+        <CartHome />
     </Container>
     </TouchableWithoutFeedback>
     )

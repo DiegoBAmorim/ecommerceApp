@@ -36,14 +36,39 @@ margin-left: 20px;
 `;
 
 export const BannerButton = styled.TouchableOpacity`
+border: 1px solid red;
+margin-top: 16px;
+flex-direction: row;
+border-radius: 32px;
+margin-left: 24px;
+margin-right: 24px;
+height: 192px;
+`;
+
+export const ContainerBannerActions = styled.View`
+width: 175px;
+height: 144px;
 `;
 
 export const Banner = styled.Image`
-height: 150px;
-width: 100%;
+height: 246px;
+width: 129px;
 border-radius: 6px;
 `;
 export const ListProduct = styled.FlatList`
-padding: 0 14px;
-flex: 1;
+margin-left: 24px;
+
+height: 176px;
+`;
+
+export const Title = styled.Text`
+font-weight: bold;
+margin-left: 24px;
+margin-right: 24px;
+
+`;
+
+export const Highlights = styled.View`
+height: 246px;
+width: 366px;
 `;
