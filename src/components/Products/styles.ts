@@ -1,15 +1,12 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.TouchableOpacity`
-flex: 1;
-border: 1px solid rgba(128, 128, 128, 0.3);
-border-radius: 7px;
-justify-content: center;
+height: 178px;
+width: 136px;
+border-radius: 8px;
 align-items: center;
-margin-left: 10px;
-margin-right: 10px;
+margin-right: 21px;
 margin-top: 20px;
-
 `;
 
 export const Title = styled.Text`
@@ -20,9 +17,7 @@ text-align: center;
 `;
 
 export const Img = styled.Image`
-width: 170px;
-height: 220px;
-margin-left: 0px;
-margin-right: 0px ;
-margin-top: 0px;
+width: 104px;
+height: 120px;
+border-radius: 8px;
 `;
