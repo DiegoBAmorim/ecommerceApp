@@ -2,10 +2,11 @@ import styled from 'styled-components/native';
 
 export const Container = styled.TouchableOpacity`
 flex: 1;
-height: 180px;
+height: 200px;
 border: 1px solid rgba(220,220,220, 0.8);
 margin-bottom: 10px;
 flex-direction: row;
+
 ;
 
 `;

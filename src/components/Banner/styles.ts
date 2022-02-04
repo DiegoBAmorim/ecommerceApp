@@ -4,7 +4,7 @@ export const Highlights = styled.View`
 height: 246px;
 `;
 
-export const BannerButton = styled.View`
+export const BannerButton = styled.TouchableOpacity`
 margin-top: 16px;
 background-color: #0A0B02;
 flex-direction: row;

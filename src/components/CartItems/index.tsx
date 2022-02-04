@@ -12,7 +12,6 @@ interface Props{
 }
 
 const CartItems:React.FC<Props> = ({data}) => {
-    console.log(data)
     return(
     <Container activeOpacity={1}>
         <ImageContainer>
